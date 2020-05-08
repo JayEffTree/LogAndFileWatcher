@@ -53,14 +53,20 @@ tail.on("line", function(dataAdded) {
   var ipReg = /\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b/;
   var objDataAdded = dataAdded.split(" ");
   
+  //Log before the filtering.
+  console.log(dataAdded)
 
   //This is optional since this is really for my personal use doesn't really affect anyone but this would ignore NETDATA and my custom webhook.
   if(objDataAdded[6].includes('/favicon.ico')) return;
   if(objDataAdded[6].includes('/dblhook')) return;
   if(objDataAdded[6].includes('/netdata')) return;
+  if(objDataAdded[6].includes('x00')){
+    console.log("Error, someone is attempting to escape a directory. Webhook Failed.")
+    return;
+  }
+  
   //ignore discords caching IPs
   if(dataAdded.match(ipReg)[0].includes('45.') || dataAdded.match(ipReg)[0].includes('35.')) return;
-  console.log(dataAdded)
 
   const sendNginxLog = new webhook.MessageBuilder()
     .setName("NGINX Logs")
