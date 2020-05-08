@@ -75,5 +75,10 @@ tail.on("line", function(dataAdded) {
     .addField('Request Type', `\`${objDataAdded[5].slice(1)}\``, true);
   
   //Send the embed
-  nxHook.send(sendNginxLog)
+  try{
+    nxHook.send(sendNginxLog)
+  }catch(e){
+    console.log("Error, someone is attempting to escape a directory. Webhook Failed.")
+  }
+  
 });
