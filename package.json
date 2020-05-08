@@ -1,0 +1,14 @@
+{
+  "name": "LogAndFileWatcher",
+  "version": "2.1.0",
+  "description": "Watch for uploads and log out nginx access log to a webhook.",
+  "main": "app.js",
+  "dependencies": {
+    "chokidar": "^3.4.0",
+    "tail": "^2.0.3",
+    "webhook-discord": "^3.7.3"
+  },
+  "devDependencies": {},
+  "author": "TXJ69",
+  "license": "ISC"
+}

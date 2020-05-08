@@ -1,0 +1,8 @@
+{
+    "access_method":"https",
+    "file_upload_dir": "/var/www/html/",
+    "access_log_dir":"/var/log/nginx/access.log",
+    "domain":"example.com",
+    "nginx_webhook":"discord_webhook_url",
+    "sharex_webhook":"discord_webhook_url"
+}
