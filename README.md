@@ -1,6 +1,6 @@
 # LogAndFileWatcher
 
-LogAndFileWatcher is a project that I use to log out my NGINX `access.log` entries to a Discord webhook, this also watches for ShareX file uploads and does the Discord webhook as well. I update this sometimes because I like to keep track of what I'm doing inside of the project so I don't mess anything up lmao.
+~~LogAndFileWatcher is a project that I use to log out my NGINX `access.log` entries to a Discord webhook, this also~~ Watches for ShareX file uploads and does the Discord webhook as well. I update this sometimes because I like to keep track of what I'm doing inside of the project so I don't mess anything up lmao.
 
 ## Installation
 
